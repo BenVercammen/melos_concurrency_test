@@ -1,0 +1,14 @@
+name: melos_concurrency_test
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+dev_dependencies:
+  melos: 2.9.0
+
+# dependency_overrides:
+#   melos:
+#     path: ../melos/packages/melos

@@ -1,0 +1,16 @@
+---
+name: melos_concurrency_test
+
+packages:
+  - mod1
+  - mod2
+  - mod3
+  - mod4
+
+scripts:
+  build_nix:
+    run: melos exec --file-exists="build.sh" "build.sh"
+  build_win:
+    run: melos exec --file-exists="build.bat" "build.bat"
+#    exec:
+#      concurrency: 1
