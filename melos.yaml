@@ -9,8 +9,8 @@ packages:
 
 scripts:
   build_nix:
-    run: melos exec --file-exists="build.sh" "build.sh"
+    run: melos exec --concurrency 1 --file-exists="build.sh" "build.sh"
   build_win:
-    run: melos exec --file-exists="build.bat" "build.bat"
+    run: melos exec --concurrency 1 --file-exists="build.bat" "build.bat"
 #    exec:
 #      concurrency: 1
