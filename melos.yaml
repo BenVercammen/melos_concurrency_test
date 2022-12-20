@@ -8,9 +8,25 @@ packages:
   - mod4
 
 scripts:
+  # default setup
   build_nix:
-    run: melos exec --concurrency 1 --file-exists="build.sh" "build.sh"
+    run: melos exec --file-exists="build.sh" "build.sh"
+#  # unexpected behavior
+#  build_nix:
+#    run: melos exec --file-exists="build.sh" "build.sh"
+#      exec:
+#        concurrency: 1
+#  # correct/expected behavior
+#  build_nix:
+#    run: melos exec --concurrency 1 --file-exists="build.sh" "build.sh"
+  # default setup
   build_win:
-    run: melos exec --concurrency 1 --file-exists="build.bat" "build.bat"
-#    exec:
-#      concurrency: 1
+    run: melos exec --file-exists="build.bat" "build.bat"
+#  # unexpected behavior
+#  build_win:
+#    run: melos exec --file-exists="build.bat" "build.bat"
+#      exec:
+#        concurrency: 1
+#  # correct/expected behavior
+#  build_win:
+#    run: melos exec --concurrency 1 --file-exists="build.bat" "build.bat"
